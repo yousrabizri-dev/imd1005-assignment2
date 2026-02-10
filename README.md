@@ -1,7 +1,8 @@
-## IMD1005 – Assignment 2: Portfolio Website
+ 
+# IMD1005 – Assignment 2: Portfolio Website
 
-**Name:** Yousra Albizri
-**Student Number:** 101392056 
+**Name:** Yousra Albizri  
+**Student Number:** 101392056  
 **Course:** IMD1005 – Web Development  
 
 ----------------------------------------------------------------------------------------
