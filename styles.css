@@ -1,0 +1,382 @@
+/* ------------------------- global ------------------------  */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+/* ------------------------ page flex ----------------------  */
+html, body {
+     height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* AI-assisted:  Used ChatGPT to get a sticky footer */
+main {
+  flex: 1; 
+}
+/* ------------------------ HEADER -------------------------  */
+/* header container*/
+.site-header {
+    padding: 1rem 1rem;
+    background: white;
+}
+/*nav container*/
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*-nav container elements*/
+/*--logo*/
+.brand-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+/*--links container*/
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+/*---links */
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+/* --------------------------HERO---------------------------  */
+/*hero container*/
+.hero{
+    position: relative;
+    min-height: 45vh;  
+    display: flex;       
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 0.75rem;
+}
+
+/*hero elements*/
+/*BG*/
+.hero-bg {
+    position: absolute; 
+    inset: 0;  /*to stretch the image box*/        
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*to prevent stretching the image inside the image box*/
+    z-index: -2;        /*to put the hero image behind the content of the hero*/
+}
+/*BG overlay*/
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    opacity: 0.6;   /* adjust: 0.3 lighter, 0.6 darker */
+    z-index: -1;
+}
+/*content*/
+.hero-content {
+    text-align: center;
+    max-width: 700px;  /*to prevent long lines*/
+    padding: 2rem;
+    color: white;
+}
+/*1 - content elements*/
+/* - profile pic*/
+.hero-profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* -text */
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+.hero-kicker{
+    margin: 0;
+    font-size: 0.8rem;       
+    letter-spacing: 0.09em; 
+    margin-bottom: 2rem;          
+}
+.hero-subtitle{
+    margin: 0;
+    font-size: 0.9rem;
+    max-width: 55ch; 
+    margin-bottom: 1.5rem;
+}
+
+/* 2- hero buttons */
+/*buton container*/
+.hero-action {
+    flex-wrap: wrap;
+    display: flex; 
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+/*buton general*/
+.btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid white;
+    color: white;
+}
+/*buton specific*/
+.btn.primary {
+    background: white;
+    color: black;
+}
+/* ------------------------ services ---------------------------  */
+/* each card in the services has two components */
+/* 1- the icon iamge (service-icon) */
+/* 2- the discription of the serivce (service-body)*/
+.services {
+    padding: 3rem 1.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* AI-assisted:  Used ChatGPT for this icon style */
+.service-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto -2.5rem;
+    background: #111;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+    position: relative;
+}
+.service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.service-body {
+    background: #fff;
+    padding: 3rem 1.5rem 1.5rem; /* extra top space for the icon overlap */
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.service-card h3,
+.service-card p {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.service-card h3 {
+
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    padding-bottom: 1rem;
+    opacity: 0.85;
+}
+/* ------------------------ Portfolio Grid---------------------------  */
+.portfolio {
+    padding: 3rem 1.5rem;
+
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.work-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgb(243, 243, 243);
+}
+
+.work-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.work-card h3,
+.work-card p {
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.work-card h3 {
+    padding-top: 0.9rem;
+    font-size: 1.1rem;
+}
+
+.work-card p {
+    padding-top: 0.9rem;
+    font-size: 85%;
+    padding-bottom: 1rem;
+    opacity: 0.7;
+}
+/* ---------------  Portfolio & SERVICES ---------------------  */
+.section-head {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+.section-head p {
+    color: #626262;
+    padding-bottom: 0.9rem;
+}
+/* ------------------------ FOOTER ---------------------------  */
+.site-footer {
+    background-color: #d7d7d7;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.85;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.footer-social img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.footer-copy {
+    margin: 1.5rem 0 0;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* ------------------------ about me style ---------------------------  */
+.about {
+    padding: 3rem 1.5rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+/* ------------------------ contact style ----------------------------  */
+.contact {
+    padding: 3rem 1.5rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #626262;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: white;
+}
+
+.form-row {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    font: inherit;
+    padding: 0.75rem;
+    border: 1px solid #080808;
+    border-radius: 10px;
+}
+
+/* AI-assisted:  Used ChatGPT to achieve Accessibility: visible focus for keyboard users */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus,
+.contact-form button:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.35);
+     outline-offset: 2px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!--------------------------------------------------------->
+    <!----------------------- HEADER -------------------------->
+    <!--------------------------------------------------------->
+    <header class="site-header">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+                <img src="images/logo.png" alt="yousra animation" class="brand-logo" />
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--------------------------------------------------------->
+    <!-----------------------  MAIN --------------------------->
+    <!--------------------------------------------------------->
+    <main>
+        <section class="contact">
+            <div class="section-head">
+                <h1>Contact / Commission</h1>
+                <p>Tell me about your project and I’ll reply as soon as I can.</p>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required placeholder="first_name last_name"/>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required placeholder="chris@avengers.com" />
+                </div>
+
+                <div class="form-row">
+                    <label for="service">Service</label>
+                    <select id="service" name="service" required>
+                        <option value="" selected disabled>Select a service</option>
+                        <option value="portrait">Portrait Illustration</option>
+                        <option value="animation">Character Animation</option>
+                        <option value="environment">3D Environment</option>
+                    </select>
+                </div>
+
+                 <div class="form-row">
+                    <label for="details">Project details</label>
+                    <textarea id="details" name="details" rows="6" required></textarea>
+                 </div>
+
+                 <button class="btn primary" type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <!--------------------------------------------------------->
+    <!----------------------- FOOTER -------------------------->
+    <!--------------------------------------------------------->
+    <footer class="site-footer">
+          <div class="footer-inner">
+            
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Yousra logo" class="footer-logo" />
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <div class="footer-social">
+                     <a href="#" aria-label="Instagram">
+                        <img src="images/insta.png" alt="isntagram" />
+                     </a>
+                     <a href="#" aria-label="YouTube">
+                        <img src="images/yt.png" alt="youtube" />
+                     </a>
+                     <a href="#" aria-label="Twitter">
+                        <img src="images/tw.png" alt="twitter" />
+                     </a>
+                     <a href="#" aria-label="LinkedIn">
+                        <img src="images/in.png" alt="linkedin" />
+                     </a>
+                </div>
+
+          </div>
+    </footer>
+</body>
+</html>
