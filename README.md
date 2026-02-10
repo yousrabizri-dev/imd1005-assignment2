@@ -1,8 +1,8 @@
 ## IMD1005 – Assignment 2: Portfolio Website
 
-Name: Yousra Albizri
-Student Number: 101392056 
-Course: IMD1005 – Web Development  
+**Name:** Yousra Albizri
+**Student Number:** 101392056 
+**Course:** IMD1005 – Web Development  
 
 ----------------------------------------------------------------------------------------
 
@@ -72,12 +72,12 @@ AI-generated snippets were marked with comments in the code where applicable.
 
 ##  Live Site
 
-GitHub Pages URL: 
+**GitHub Pages URL:** 
 https://yousrabizri-dev.github.io/imd1005-assignment2/
 
 ----------------------------------------------------------------------------------------
 
 ##  Repository
 
-GitHub Repo:  
+**GitHub Repo:**
 https://github.com/yousrabizri-dev/imd1005-assignment2
