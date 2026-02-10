@@ -45,7 +45,8 @@ These changes were made to make the project more realistic, relevant to my goals
 
 ##  Image Credits
 
-All images and artwork used in this project are my own original work, created for my portfolio.
+All images (other than the hero background) and artwork used in this project are my own original work, created for my portfolio.
+hero image : adobe stock photo
 
 ----------------------------------------------------------------------------------------
 ##  AI Usage
