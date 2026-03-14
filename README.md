@@ -45,6 +45,7 @@ For Assignment 3, I completed 5 of the available JavaScript requests:
 
 5. **Live filtering by category**  
    Users can filter portfolio projects by category, and the active filter is visually highlighted.
+   The Users can aslo search the projects by typing a keyword. 
 
 ## Tools & Technologies Used
 - HTML

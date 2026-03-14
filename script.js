@@ -216,18 +216,37 @@ for (const button of filterButtons)
         }
         button.classList.add("active");
         // deciding what to render 
-        if (selectedCategory === "All") {
-            renderProjects(projects);
-        }
-        else 
-        {
-            // AI assisted :  the filtering function 
-            const filteredProjects = projects.filter(function (project) {
-                return project.category === selectedCategory;
-            }
-            );
-            renderProjects(filteredProjects);
-        }
+        const filteredProjects = (selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory));
+        renderProjects(filteredProjects);
     }
     );
+}
+
+// adding the keyword search logic
+// 1- we get the search input
+// 2- then we listen for input form the user and then call a function 
+// 3- the function will save the keywrod
+// 4- then search every project in our porject array 
+// 5- it looks for the keyword in the (title - description - category) of every project
+// 6- renders the matching projects
+const searchInput = document.querySelector("#project-search");
+
+if (searchInput) {
+  searchInput.addEventListener("input", function () {
+
+    const keyword = searchInput.value.toLowerCase();
+
+    const filteredProjects = projects.filter(
+                                function(project){
+                                    return (
+                                            project.title.toLowerCase().includes(keyword) ||
+                                            project.description.toLowerCase().includes(keyword) ||
+                                            project.category.toLowerCase().includes(keyword)
+                                        );
+                                }
+                            );
+
+    renderProjects(filteredProjects);       
+
+  });
 }

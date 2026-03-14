@@ -494,3 +494,17 @@ and showing the hamburger icon */
   background: black;
   color: white;
 }
+
+/* this is for : searching by a keyword */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#project-search {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  width: 250px;
+}
