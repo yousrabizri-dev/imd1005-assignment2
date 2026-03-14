@@ -216,6 +216,7 @@ for (const button of filterButtons)
         }
         button.classList.add("active");
         // deciding what to render 
+        // AI-assisted: Used ChatGPT to help with the ternary operator
         const filteredProjects = (selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory));
         renderProjects(filteredProjects);
     }
