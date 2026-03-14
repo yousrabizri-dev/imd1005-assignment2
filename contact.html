@@ -15,6 +15,8 @@
             <a class="brand" href="index.html">
                 <img src="images/logo.png" alt="yousra animation" class="brand-logo" />
             </a>
+            <!--- Request 1 : Responsive Navigation with Hamburger Menu --->
+            <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -33,15 +35,20 @@
                 <p>Tell me about your project and I’ll reply as soon as I can.</p>
             </div>
 
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" action="#" method="post" novalidate>
+
+                
+
                 <div class="form-row">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" autocomplete="name" required placeholder="first_name last_name"/>
+                    <p class="error-message"></p>  <!-- validation error msg-->
                 </div>
 
                 <div class="form-row">
                     <label for="email">Email</label>
                     <input id="email" name="email" type="email" autocomplete="email" required placeholder="chris@avengers.com" />
+                    <p class="error-message"></p>  <!-- validation error msg-->
                 </div>
 
                 <div class="form-row">
@@ -52,13 +59,16 @@
                         <option value="animation">Character Animation</option>
                         <option value="environment">3D Environment</option>
                     </select>
+                    <p class="error-message"></p>  <!-- validation error msg-->
                 </div>
 
                  <div class="form-row">
                     <label for="details">Project details</label>
                     <textarea id="details" name="details" rows="6" required></textarea>
+                    <p class="error-message"></p>  <!-- validation error msg-->
                  </div>
 
+                 <p id="success-message"></p> <!-- validation success msg -->
                  <button class="btn primary" type="submit">Send Message</button>
             </form>
         </section>
@@ -96,5 +106,9 @@
 
           </div>
     </footer>
+    <!-- Request 3: Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">Top</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

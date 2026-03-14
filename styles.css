@@ -5,6 +5,10 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
+/*updated assignment 2 : from assginemnt 2 feed back */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 /* ------------------------ page flex ----------------------  */
 html, body {
      height: 100%;
@@ -379,4 +383,114 @@ h1 {
 .contact-form button:focus {
     outline: 3px solid rgba(0, 0, 0, 0.35);
      outline-offset: 2px;
+}
+/* ----------------------------------------------------------------------*/
+/* ------- Request 1: Responsive Navigation with Hamburger Men ----------*/
+/* ----------------------------------------------------------------------*/
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/*mobile media query
+here we are changing the appearnace of the navigation links 
+and showing the hamburger icon */
+@media (max-width: 768px) {
+    .menu-toggle { /* to show the hamburger button*/ 
+        display: block;
+    }
+    .nav { /*to move the nav contents to the next line*/
+        flex-wrap: wrap;
+    }
+
+    .nav-links {  /*hides the links be default and set them up in a column*/
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .nav-links.show { /*to toggle show vs hide in js*/
+        display: flex;
+    }
+}
+/* ----------------------------------------------------------------------*/
+/* ---------- Request 2: Form Validation with Error Messages ------------*/
+/* ----------------------------------------------------------------------*/
+
+.error-message {
+  color: #b00020;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+}
+
+#success-message {
+  color: #1b5e20;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem;
+  min-height: 1.2rem;
+}
+/* ----------------------------------------------------------------------*/
+/* ----------------  Request 3: Back to Top Button ----------------------*/
+/* ----------------------------------------------------------------------*/
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    cursor: pointer;
+    z-index: 1000;  /* so the button stays above images */
+}
+#backToTop:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+#backToTop.visible {
+  display: block;
+}
+
+/* ----------------------------------------------------------------------*/
+/* --------  Request 4: Dynamic Content Rendering from Data -------------*/
+/* ----------------------------------------------------------------------*/
+.work-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  padding-top: 0.75rem;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------------*/
+/* ----------------  Request 6: Live Filtering or Search ----------------*/
+/* ----------------------------------------------------------------------*/
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  max-width: 1100px;
+}
+
+.filter-btn {
+  padding: 0.6rem 1rem;
+  border: 1px solid #333;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+}
+
+.filter-btn.active {
+  background: black;
+  color: white;
 }
